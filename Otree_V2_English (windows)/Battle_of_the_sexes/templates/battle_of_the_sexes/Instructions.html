@@ -1,0 +1,103 @@
+{% load otree staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'global/matrix.css' %}" />
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Instructions
+    </h3>
+    <p>
+        These are the instructions for the experiment. These instructions are the same as on the paper that is handed out. Both
+        will remain available during the experiment. Please read the instructions carefully.
+    </p>
+
+    <p>
+        This experiment is divided into main three parts and an introduction part. In the introduction part three practice rounds will be
+        played. During the three main parts of the experiment 20 rounds will be played. Before each part, you will be paired randomly
+        and anonymously with 1 or more participants. The participants you are paired with will remain the same
+        during the rounds of the different parts. So, in the main rounds the participants you are paired with will be
+        the same for 20 rounds. After one part ends you will be randomly matched again. After the second random matching
+        you probably play against other participants, but there is a chance they can also be the same.
+    </p>
+
+    <p>
+        Before each part you will be randomly designated a type. <strong>Your type</strong> can be <span style="background-color: #3399ff">
+        Blue</span> or <span style="background-color: #FFFF00">Yellow</span>. Prior to the start of the part you will learn which type you are.
+        You will remain the same type during the rounds of the different parts. But before each part you will be
+        randomly assigned a type again. <em>It will be clearly stated when a part ends and you will be assignment a new type and
+        become randomly paired to new participants again.</em>
+    </p>
+
+    <p>
+        Each of you must independently and simultaneously make a decision between 'blue' and 'yellow'. <strong>Your payoffs will
+        be determined by the choices of the players you are paired with and the type you are. </strong> Your <strong>type</strong>,
+        <span style="background-color: #3399ff"> Blue</span> or <span style="background-color: #FFFF00">Yellow</span>, will indicate how many points you can earn with the
+        <strong>decision</strong> 'blue' or 'yellow'. Below you find 2 tables, the table on the left for type <span style="background-color: #3399ff">
+        Blue</span> and the table on the right for type <span style="background-color: #FFFF00">Yellow</span>. In case you play against 1 other participant,
+        when your type is <span style="background-color: #3399ff"> Blue</span> (left table), you choose 'blue' and the other participant
+        also chooses 'blue', the payoff for that round is 10. When your type is <span style="background-color: #3399ff"> Blue</span>
+        and you choose 'yellow' and the other participant also chooses 'yellow', the payoff for that round is 8. When you choose
+        'blue' and the other participant chooses 'yellow' or the other way around, the payoff will be 0. When your type is <span style="background-color: #FFFF00">Yellow</span>
+        (table on the right) you get the highest payoff of 10, when you and the other participant both choose yellow. 8 points when you both choose blue.
+        And 0 point when you and the  other participant don't choose the same color.
+    </p>
+
+    <p>
+        <em>Figure 1: Overview of payoffs. See hard copy if the tables are not clear.</em>
+    </p>
+    <div class="row">
+        <div class="col-md-7 col-md-offset-2">
+            <table class="table table-hover">
+                <tr>
+                    <th colspan="2">Your type: <span style="background-color: #3399ff">Blue</span> </th>
+                    <th colspan="2">Your Choice: </th>
+                    <th colspan="2">       </th>
+                    <th colspan="2">Your type: <span style="background-color: #FFFF00">Yellow</span> </th>
+                    <th colspan="2">Your Choice: </th>
+                </tr>
+                <tr>
+                    <th colspan="2">       </th>
+                    <th>blue</th>
+                    <th>yellow</th>
+                    <th colspan="2"></th>
+                    <th colspan="2"></th>
+                    <th>blue</th>
+                    <th>yellow</th>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span class="rotate90">Other participant's choice</span> </th>
+                    <th>blue</th>
+                    <td>{{ Constants.CoordinatePref_payoff }}</td>
+                    <td>{{ Constants.mismatch_payoff }}</td>
+                    <th colspan="2">        </th>
+                    <th rowspan="2"><span class="rotate90">Other participant's choice</span> </th>
+                    <th>blue</th>
+                    <td>{{ Constants.CoordinateNotPref_payoff }}</td>
+                    <td>{{ Constants.mismatch_payoff }}</td>
+                </tr>
+                <tr>
+                    <th>Opera</th>
+                    <td>{{ Constants.mismatch_payoff }}</td>
+                    <td>{{ Constants.CoordinateNotPref_payoff }}</td>
+                    <th colspan="2">        </th>
+                    <th>Yellow</th>
+                    <td>{{ Constants.mismatch_payoff }}</td>
+                    <td>{{ Constants.CoordinatePref_payoff }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+     <p>
+        Note that your type will remain the same during the rounds of a part of the experiment, but you can change your
+        decision every round. In this experiment you are randomly paired with 1 or more players who may or may not have
+        the same type as you have. You will not be able to see which type the others are. You make the one decisions
+        that holds for all participants you are paired with. The payoff of a round will be the average of the payoffs
+        you get from the participants you are paired with. Thus, if you are paired with two other participants and you
+        payoff with one would be 10 according to the table above and the payoff with the other would be 0, you earn 5
+        points in that round. At the end of the experiment, the points you earned will be paid out to you at an exchange
+        rate of 30 points per euro.
+    </p>
+
+</div>

@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Questions about the game
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.question1 label="1: Your type is 'blue'. Imagine you choose blue and the other player also chooses blue. What is your payoff in this round?" %}
+
+    {% formfield player.question2 label="2: Your type is 'blue'. Imagine you choose yellow and the other player also chooses yellow. What is your payoff in this round?" %}
+
+    {% formfield player.question3 label="3: Your type is 'blue'. Imagine you choose blue and the other player chooses yellow. What is your payoff in this round?" %}
+
+    {% formfield player.question4 label="4: Your type is 'yellow'. Imagine you choose yellow and the other player also chooses yellow. What is your payoff in this round?" %}
+
+    {% formfield player.question5 label="5: Your type is 'yellow'. Imagine you choose blue and the other player also chooses blue. What is your payoff in this round?" %}
+
+    {% formfield player.question6 label="6: Your type is 'yellow'. Imagine you interact with 2 other participants, one chooses yellow and the other chooses blue. What is your overall payoff in this round?" %}
+
+    {% formfield player.question7 label="7: Your type is 'yellow'. Imagine you interact with 2 other participants, one chooses yellow and the other chooses blue. What is your average payoff in this round?" %}
+
+    {% next_button %}
+
+    {% include Constants.instructions_template %}
+
+{% endblock %}

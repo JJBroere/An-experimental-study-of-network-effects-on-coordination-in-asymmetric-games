@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Practise round
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Now you are going to play 3 practice rounds. The practice rounds don't count for your payment of the experiment.
+        During the practice rounds your type is <strong>{{player.role}}</strong>. Your type
+        will remain the same during the rounds. In these practice rounds you are randomly matched to
+        <strong>{{player.degree}}</strong> other participants. These participant will remain the same during the rounds.
+        You will not know the type of the other players.
+    </p>
+
+    <p>
+        If you have any questions, please raise your hand.
+    </p>
+
+    {% next_button %}
+
+
+{% endblock %}

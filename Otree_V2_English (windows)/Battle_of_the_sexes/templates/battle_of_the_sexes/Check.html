@@ -1,0 +1,38 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+    <p>Question 1: Your type is 'blue'. Imagine you choose blue and the other player also chooses blue. What is your payoff in
+        this round?</p>
+    <p>Your answer {{ player.question1 }} is <strong>{{ player.ansQues1 }}</strong>.</p>
+
+    <p>Question 2: Your type is 'blue'. Imagine you choose yellow and the other player also chooses yellow. What is your payoff
+        in this round?</p>
+    <p>Your answer {{ player.question2 }} is <strong>{{ player.ansQues2 }}</strong>.</p>
+    <p>Question 3: Your type is 'blue'. Imagine you choose blue and the other player also chooses blue. What is your payoff in
+        this round?</p>
+    <p>Your answer {{ player.question3 }} is <strong>{{ player.ansQues3 }}</strong>.</p>
+
+    <p>Question 4: Your type is 'yellow'. Imagine you choose yellow and the other player also chooses yellow. What is your
+        payoff in this round?</p>
+    <p>Your answer {{ player.question4 }} is <strong>{{ player.ansQues4 }}</strong>.</p>
+
+    <p>Question 5: Your type is 'yellow'. Imagine you choose blue and the other player also chooses blue. What is your payoff
+        in this round?</p>
+    <p>Your answer {{ player.question5 }} is <strong>{{ player.ansQues5 }}</strong>.</p>
+
+    <p>Question 6: Your type is 'yellow'. Imagine you interact with 2 other participants, one chooses yellow and the
+        other chooses blue. What is your overall payoff in this round?</p>
+    <p>Your answer {{ player.question6 }} is <strong>{{ player.ansQues6 }}</strong>.</p>
+
+    <p>Question 6: Your type is 'yellow'. Imagine you interact with 2 other participants, one chooses yellow and the
+        other chooses blue. What is your average payoff in this round?</p>
+    <p>Your answer {{ player.question7 }} is <strong>{{ player.ansQues7 }}</strong>.</p>
+
+
+    {% next_button %}
+{% endblock %}

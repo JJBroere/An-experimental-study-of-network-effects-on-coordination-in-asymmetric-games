@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Decide
+{% endblock %}
+
+{% block content %}
+
+
+<p>
+    Your type is <strong>{{ player.role }}</strong>.
+</p>
+
+    {% formfield player.Blue label='Please make a choice:' %}
+    {% next_button %}
+
+    {% include Constants.instructions_template %}
+
+{% endblock %}
