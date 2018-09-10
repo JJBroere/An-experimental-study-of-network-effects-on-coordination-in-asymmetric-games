@@ -1,0 +1,29 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Tercera parte del experimento
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Ahora comenzará la tercera parte del experimento. Durante la tercera parte tu tipo es <strong>{{player.role}}</strong>.
+        La tercera parte será de 20 asaltos. Tu tipo permanecerá igual durante las 20 rondas. Usted es emparejado al azar con
+        <strong>{{player.degree}}</strong> otros participantes. Estos participantes seguirán siendo los mismos durante las
+        rondas. Usted no sabrá el tipo de los otros jugadores.
+    </p>
+
+    <p>
+        Durante cada ronda del experimento usted podrá ver un temporizador que indica el tiempo previsto tanto para la elección
+        como para el análisis del resultado de la ronda anterior. De todas formas puedes tomarte más tiempo si lo necesitas.
+    </p>
+
+    <p>
+        Si tiene alguna pregunta, por favor levante la mano.
+    </p>
+
+    {% next_button %}
+
+
+{% endblock %}

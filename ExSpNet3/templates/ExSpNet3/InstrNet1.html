@@ -1,0 +1,24 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    La primera parte del experimento.
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Ahora comenzará el experimento. El experimento consta de 3 partes, cada una de las cuales consta de 20 rondas.
+        Esta es la primera parte. Durante la primera parte tu tipo es  <strong>{{player.role}}</strong>. Tu tipo permanecerá
+        igual durante las 20 rondas. Usted es emparejado al azar con <strong>{{player.degree}}</strong> otros participantes.
+        Estos participantes seguirán siendo los mismos durante las rondas. No sabrás el tipo de los otros participantes.
+    </p>
+
+    <p>
+        Si tiene alguna pregunta, por favor levante la mano.
+    </p>
+
+    {% next_button %}
+
+
+{% endblock %}

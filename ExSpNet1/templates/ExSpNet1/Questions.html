@@ -1,0 +1,28 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Preguntas
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.question1 with label="1: Su tipo es `azul'. Imagínese que usted elige azul y el otro jugador también elige azul. ¿Cuál es tu recompensa en esta ronda?" %}
+
+    {% formfield player.question2 with label="2: Su tipo es 'azul'. Imagínese que usted elige amarillo y el otro jugador también elige amarillo. ¿Cuál es tu recompensa en esta ronda?" %}
+
+    {% formfield player.question3 with label="3: Su tipo es'azul'. Imagínese que usted elige el azul y el otro jugador elige el amarillo. ¿Cuál es tu recompensa en esta ronda?" %}
+
+    {% formfield player.question4 with label="4: Su tipo es `amarillo'. Imagínese que usted elige amarillo y el otro jugador también elige amarillo. ¿Cuál es tu recompensa en esta ronda?" %}
+
+    {% formfield player.question5 with label="5: Su tipo es `amarillo'. Imagínese que usted elige azul y el otro jugador también elige azul. ¿Cuál es tu recompensa en esta ronda?" %}
+
+    {% formfield player.question6 with label="6: Su tipo es `amarillo'. Imagina que interactúas con otros dos participantes, uno elige el amarillo y el otro el azul. ¿Cuál es su beneficio total en esta ronda?" %}
+
+    {% formfield player.question7 with label="7: Su tipo es `amarillo'. Imagina que interactúas con otros dos participantes, uno elige el amarillo y el otro el azul. ¿Cuál es su pago promedio en esta ronda?" %}
+
+    {% next_button %}
+
+    {% include Constants.instructions_template %}
+
+{% endblock %}

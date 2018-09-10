@@ -1,0 +1,33 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+    <p>Pregunta 1: Su tipo es `azul'. Imagínese que usted elige azul y el otro jugador también elige azul. ¿Cuál es tu recompensa en esta ronda?</p>
+    <p>Tu respuesta {{ player.question1 }} es <strong>{{ player.ansQues1 }}</strong>.</p>
+
+    <p>Pregunta 2: Su tipo es 'azul'. Imagínese que usted elige amarillo y el otro jugador también elige amarillo. ¿Cuál es tu recompensa en esta ronda?</p>
+
+    <p>Tu respuesta {{ player.question2 }} es <strong>{{ player.ansQues2 }}</strong>.</p>
+
+    <p>Pregunta 3: Su tipo es'azul'. Imagínese que usted elige el azul y el otro jugador elige el amarillo. ¿Cuál es tu recompensa en esta ronda?</p>
+    <p>Tu respuesta {{ player.question3 }} es <strong>{{ player.ansQues3 }}</strong>.</p>
+
+    <p>Pregunta 4: Su tipo es `amarillo'. Imagínese que usted elige amarillo y el otro jugador también elige amarillo. ¿Cuál es tu recompensa en esta ronda?</p>
+    <p>Tu respuesta {{ player.question4 }} es <strong>{{ player.ansQues4 }}</strong>.</p>
+
+    <p>Pregunta 5: Su tipo es `amarillo'. Imagínese que usted elige azul y el otro jugador también elige azul. ¿Cuál es tu recompensa en esta ronda?</p>
+    <p>Tu respuesta {{ player.question5 }} es <strong>{{ player.ansQues5 }}</strong>.</p>
+
+    <p>Pregunta 6: Su tipo es `amarillo'. Imagina que interactúas con otros dos participantes, uno elige el amarillo y el otro el azul. ¿Cuál es su beneficio total en esta ronda?</p>
+    <p>Tu respuesta {{ player.question6 }} es <strong>{{ player.ansQues6 }}</strong>.</p>
+
+    <p>Pregunta 7: Su tipo es `amarillo'. Imagina que interactúas con otros dos participantes, uno elige el amarillo y el otro el azul. ¿Cuál es su pago promedio en esta ronda?</p>
+    <p>Tu respuesta {{ player.question7 }} es <strong>{{ player.ansQues7 }}</strong>.</p>
+
+
+    {% next_button %}
+{% endblock %}

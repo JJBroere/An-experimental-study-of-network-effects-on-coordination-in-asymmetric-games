@@ -1,0 +1,26 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Ronda de práctica
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Ahora vas a jugar 3 rondas de práctica. Las rondas de práctica no cuentan para el pago del experimento. Durante
+        las rondas de práctica tu tipo es <strong>{{player.role}}</strong>. Tu tipo seguirá siendo el mismo durante las rondas.
+        En estas rondas de práctica usted es emparejado aleatoriamente con
+        <strong>{{player.degree}}</strong> otros participantes. Estos participantes seguirán siendo los mismos durante las
+        rondas. Usted no sabrá el tipo de los otros jugadores.
+    </p>
+
+
+    <p>
+        Si tiene alguna pregunta, por favor levante la mano.
+    </p>
+
+    {% next_button %}
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+
+{% block title %}
+    Bienvenida
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Bienvenidos a este experimento y gracias por venir y participar. Por favor, lea atentamente las instrucciones.
+        Estas instrucciones son idénticas para todos los participantes. Las instrucciones dicen todo lo que necesitas
+        saber para participar en el experimento. Si tiene alguna pregunta, por favor levante la mano. Uno de los
+        experimentadores se pondrá en contacto con usted para responder a su pregunta.
+    </p>
+
+    <p>
+        Usted puede ganar dinero por medio de ganar puntos de ganancia durante el experimento. El número de puntos de
+        ganancia que usted gana depende de sus elecciones y las elecciones de los demás. Al final del experimento, el
+        número total de puntos de beneficio que ganes durante el experimento será intercambiado a razón de:
+    </p>
+
+    <p>
+        <strong>por cada 50 puntos = 1 euro.</strong>
+    </p>
+
+    <p>
+        Además, obtendrá una tarifa de 5 euros. El dinero que ganes será pagado en efectivo al final del experimento sin
+        que otros participantes puedan ver cuánto ganaste. Durante el experimento no se le permite comunicarse con otros
+        participantes. Por favor apague su teléfono móvil y póngalo en su bolsa. Además, sólo puede utilizar las funciones
+        de la pantalla necesarias para llevar a cabo el experimento.
+    </p>
+
+    {% next_button %}
+
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Resultados
+{% endblock %}
+
+{% block content %}
+
+<p>
+    Tienes <strong>{{player.degree}}</strong> oponentes. Elegiste el <em>{{player.decision_label}}</em>.
+    <strong>{{player.choises_other_players_F }}</strong> oponente eligió el azul y <strong>{{player.choises_other_players_B }}</strong>
+    el amarillo. Como resultado, su pago es de <strong>{{player.choises_other_players_F }}</strong> X <strong>{{player.pp1 }}</strong>
+    + <strong>{{player.choises_other_players_B }}</strong> X <strong>{{player.pp2 }}</strong> = <strong>{{player.payoff}}</strong>.
+</p>
+
+<p>
+    Su pago promedio de esta ronda = <strong>{{player.points}}</strong>
+</p>
+
+<p>
+    Su pago en todas las rondas = <strong>{{player.cpay}}</strong>
+</p>
+
+
+{% block scripts %}
+    <script>
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10)
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                timer = 0;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var fiveMinutes = 20,
+                display = document.querySelector('#time');
+            startTimer(fiveMinutes, display);
+        };
+    </script>
+{% endblock %}
+
+
+    <div>Por favor, intente terminar la página en <span id="time">00:20</span> segundos</div>
+
+    {% next_button %}
+
+    {% include Constants.instructions_template %}
+
+{% endblock %}

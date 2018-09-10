@@ -1,0 +1,103 @@
+{% load staticfiles otree_tags %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'global/matrix.css' %}" />
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+        Instrucciones
+    </h3>
+    <p>
+        Estas son las instrucciones para el experimento. Estas instrucciones son las mismas que en la pantalla. Las
+        instrucciones permanecerán disponibles durante el experimento. Por favor, lea atentamente las instrucciones.
+    </p>
+
+    <p>
+        Este experimento se divide en tres partes principales y una parte de introducción. En la parte de introducción
+        se jugarán tres rondas de práctica. Durante las tres partes principales del experimento se jugarán 20 rondas.
+        Antes de cada parte, se le emparejará de forma aleatoria y anónima con uno o más participantes. Los participantes
+        con los que estás emparejado seguirán siendo los mismos durante las rondas de las diferentes partes. Por lo
+        tanto, en las rondas principales, los participantes con los que estés emparejado serán los mismos durante 20
+        rondas. Después de que una parte termina usted será emparejado al azar otra vez. Después de la segunda coincidencia
+        aleatoria, es probable que juegues contra otros participantes, pero existe la posibilidad de que también sean iguales.
+    </p>
+
+    <p>
+        Antes de cada parte se le designará un tipo al azar. <strong>Tu tipo </strong> puede ser <span style="background-color: #3399ff">
+        Azul</span> o <span style="background-color: #FFFF00">Amarillo</span>. Antes del comienzo de la parte usted aprenderá qué tipo usted es.
+        Usted seguirá siendo del mismo tipo durante las rondas de las diferentes partes. Pero antes de cada parte se le
+        asignará un tipo al azar de nuevo. <em>Se indicará claramente cuando termine una parte y se le asignará un nuevo
+        tipo y se le emparejará de nuevo al azar con nuevos participantes.</em>
+    </p>
+
+    <p>
+        Cada uno de ustedes debe tomar una decisión de forma independiente y simultánea entre 'azul' y 'amarillo'. <strong>Tus
+        ganancias serán determinadas por las elecciones de los jugadores con los que estás emparejado y el tipo de jugador
+        que eres. </strong> Tu tipo,
+        <span style="background-color: #3399ff"> Azul</span> o <span style="background-color: #FFFF00">Amarillo</span>, te indicará cuántos puntos puedes ganar con la
+        <strong>decisión</strong> 'azul' o 'amarillo'. Debajo encontrará 2 tablas, la tabla de la izquierda para el tipo <span style="background-color: #3399ff">
+        Azul</span> y la tabla de la derecha para el tipo <span style="background-color: #FFFF00">Amarillo</span>. Durante los emparejamientos, cuando tu tipo es
+        <span style="background-color: #3399ff">Azul</span> (tabla de la izquierda), y eliges 'azul' y el otro participante también elige 'azul', el resultado
+        de esa ronda es de 10 puntos, en cambio si ambos elegís  'amarillo' el resultado será de 8 puntos. De la misma forma, cuando tu tipo es
+        <span style="background-color: #FFFF00">Amarillo</span> (tabla de la derecha) obtienes la máxima puntuación de 10 cuando ambos escogéis
+        'amarillo' y 8 cuando ambos elegís 'azul'. Si tú y el otro participante no escogéis el mismo color el resultado son 0 puntos.
+    </p>
+
+    <p>
+        <em>Figura 1: Resumen de los posibles puntos de beneficio</em>
+    </p>
+    <div class="row">
+        <div class="col-md-7 col-md-offset-2">
+            <table class="table table-hover">
+                <tr>
+                    <th colspan="2">Tu tipo: <span style="background-color: #3399ff">Azul</span> </th>
+                    <th colspan="2">Tu elección: </th>
+                    <th colspan="2">       </th>
+                    <th colspan="2">Your type: <span style="background-color: #FFFF00">Amarillo</span> </th>
+                    <th colspan="2">Tu elección: </th>
+                </tr>
+                <tr>
+                    <th colspan="2">       </th>
+                    <th>Azul</th>
+                    <th>Amarillo</th>
+                    <th colspan="2"></th>
+                    <th colspan="2"></th>
+                    <th>Azul</th>
+                    <th>Amarillo</th>
+                </tr>
+                <tr>
+                    <th rowspan="2"><span class="rotate90">Elección de otro participante</span> </th>
+                    <th>Azul</th>
+                    <td>{{ Constants.CoordinatePref_payoff }}</td>
+                    <td>{{ Constants.mismatch_payoff }}</td>
+                    <th colspan="2">        </th>
+                    <th rowspan="2"><span class="rotate90">Elección de otro participante</span> </th>
+                    <th>Azul</th>
+                    <td>{{ Constants.CoordinateNotPref_payoff }}</td>
+                    <td>{{ Constants.mismatch_payoff }}</td>
+                </tr>
+                <tr>
+                    <th>Amarillo</th>
+                    <td>{{ Constants.mismatch_payoff }}</td>
+                    <td>{{ Constants.CoordinateNotPref_payoff }}</td>
+                    <th colspan="2">        </th>
+                    <th>Amarillo</th>
+                    <td>{{ Constants.mismatch_payoff }}</td>
+                    <td>{{ Constants.CoordinatePref_payoff }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+     <p>
+        Tenga en cuenta que su tipo seguirá siendo el mismo durante las rondas de una parte del experimento, pero puede
+         cambiar su decisión en cada ronda.  En este experimento usted es emparejado aleatoriamente con 1 o más jugadores
+         que pueden o no tener el mismo tipo que usted tiene. No podrá ver de qué tipo son los otros. Tu elección en cada
+         ronda se utilizará para resolver todos tus emparejamientos de esa ronda. El pago de cada ronda será el promedio
+         de las recompensas obtenidas con todos tus emparejamientos. Por ejemplo, si usted está emparejado con otros dos
+         participantes y en uno de los casos su recompensa es 10 puntos y en el otro es 0 su ganancia de esta ronda serian
+         5 puntos. Al final del experimento, los puntos ganados se le pagarán a un tipo de cambio de 50 puntos por euro.
+    </p>
+
+</div>

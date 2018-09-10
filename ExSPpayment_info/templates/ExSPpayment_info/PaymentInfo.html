@@ -1,0 +1,31 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Gracias por participar
+{% endblock %}
+
+{% block content %}
+
+    <div class="panel panel-default" style="margin-bottom:10px">
+        <div class="panel-body">
+            <p>Gracias por participar. Por favor, deje esta pantalla abierta. </p>
+
+
+            <p> Su pago total por las tres rondas es de <strong>{{player.pa1}}</strong> +  <strong>{{player.pa2}}</strong> + <strong>{{player.pa3}}</strong> =
+                <strong>{{player.fipay}}</strong> </p>
+            <p><em>Por lo tanto, usted recibirá 5 + <strong>{{player.fipay}}</strong>/50 = {{ player.finapay }} euro</em></p>
+
+            <p>Para poder recibir su dinero anónimamente primero todos deben salir del aula con papel en el que figura el
+                número del ordenador que les ha sido asignado. Posteriormente se les llamará por separado con el número
+                del ordenador para realizar los pagos.
+            </p>
+        </div>
+    </div>
+
+
+    </div>
+
+
+{% endblock %}
+

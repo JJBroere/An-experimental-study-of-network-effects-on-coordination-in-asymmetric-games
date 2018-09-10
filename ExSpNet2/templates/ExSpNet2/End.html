@@ -1,0 +1,17 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    End Practise
+{% endblock %}
+
+{% block content %}
+
+<p>
+    End of practise you have <strong>{{player.cpaydis}}</strong> points. We now proceed to...
+</p>
+
+    {% next_button %}
+
+
+{% endblock %}
